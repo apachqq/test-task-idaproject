@@ -15,7 +15,7 @@
         </div>
         <div>
             <label for="description">Описание товара</label>
-            <textarea type="text" id="description" cols="30" rows="7">Введите описание товара</textarea>
+            <textarea type="text" id="description" placeholder="Введите описание товара" cols="30" rows="7"></textarea>
         </div>
         <div>
             <label for="url">Ссылка на изображение товара</label>
@@ -69,6 +69,13 @@
         color: #B4B4B4;
         padding: 10px 0 0 16px;
         resize: none;
+    }
+
+    textarea::placeholder {
+        font-size: 12px;
+        line-height: 15px;
+        color: #B4B4B4;
+        padding-left: 1px;
     }
 
     input {
