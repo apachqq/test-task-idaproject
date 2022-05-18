@@ -1,4 +1,6 @@
-# test-task-idaproject
+# Node Version 16.14.2
+
+# test-task-idaproject | Vue, Vuex, Vue-router, SCSS, Eslint
 
 ## Project setup
 ```
