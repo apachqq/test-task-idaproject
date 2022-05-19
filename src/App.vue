@@ -1,7 +1,7 @@
 <template>
     <div class="addProductSelect">
         <div>Добавление товара</div>
-        <div>
+        <div class="select">
             <select>
                 <option disabled value="">По умолчанию</option>
                 <option value=""></option>
@@ -16,7 +16,7 @@
             </div>
             <div>
                 <label for="description">Описание товара</label>
-                <textarea type="text" id="description" placeholder="Введите описание товара" cols="30"
+                <textarea id="description" placeholder="Введите описание товара" cols="30"
                           rows="7"></textarea>
             </div>
             <div>
@@ -33,6 +33,7 @@
             <div class="cards">
                 <div class="card">
                     <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
+                    <img class="delete-icon" src="img/delete.svg" />
                     <div class="card-name">Наименование товара</div>
                     <div class="card-description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
                         товара в
@@ -42,6 +43,7 @@
                 </div>
                 <div class="card">
                     <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
+                    <img class="delete-icon" src="img/delete.svg" />
                     <div class="card-name">Наименование товара</div>
                     <div class="card-description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
                         товара в
@@ -51,6 +53,7 @@
                 </div>
                 <div class="card">
                     <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
+                    <img class="delete-icon" src="img/delete.svg" />
                     <div class="card-name">Наименование товара</div>
                     <div class="card-description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
                         товара в
@@ -60,6 +63,7 @@
                 </div>
                 <div class="card">
                     <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
+                    <img class="delete-icon" src="img/delete.svg" />
                     <div class="card-name">Наименование товара</div>
                     <div class="card-description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
                         товара в
@@ -68,7 +72,8 @@
                     <div class="card-price">10 000 руб.</div>
                 </div>
                 <div class="card">
-                    <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
+                    <img class="card-icon" src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
+                    <img class="delete-icon" src="img/delete.svg" />
                     <div class="card-name">Наименование товара</div>
                     <div class="card-description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
                         товара в
@@ -93,6 +98,15 @@
             height: 423px;
             margin-right: 16px;
             margin-left: 16px;
+            background: #FFFEFB;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.04), 0 6px 10px rgba(0, 0, 0, 0.02);
+            border-radius: 4px;
+
+            .delete-icon {
+                position: relative;
+                bottom: 215px;
+                left: 310px
+            }
 
             .card-name {
                 font-weight: 600;
