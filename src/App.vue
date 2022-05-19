@@ -33,14 +33,49 @@
             <div class="cards">
                 <div class="card">
                     <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
-                    <div>Наименование товара</div>
-                    <div>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                    <div class="card-name">Наименование товара</div>
+                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
                         товара в
                         несколько строк
                     </div>
-                    <div>10 000 руб.</div>
+                    <div class="card-price">10 000 руб.</div>
                 </div>
-
+                <div class="card">
+                    <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
+                    <div class="card-name">Наименование товара</div>
+                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                        товара в
+                        несколько строк
+                    </div>
+                    <div class="card-price">10 000 руб.</div>
+                </div>
+                <div class="card">
+                    <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
+                    <div class="card-name">Наименование товара</div>
+                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                        товара в
+                        несколько строк
+                    </div>
+                    <div class="card-price">10 000 руб.</div>
+                </div>
+                <div class="card">
+                    <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
+                    <div class="card-name">Наименование товара</div>
+                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                        товара в
+                        несколько строк
+                    </div>
+                    <div class="card-price">10 000 руб.</div>
+                </div>
+                <div class="card">
+                    <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
+                    <div class="card-name">Наименование товара</div>
+                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                        товара в
+                        несколько строк
+                    </div>
+                    <div class="card-price">10 000 руб.</div>
+                </div>
             </div>
         </div>
     </div>
@@ -52,11 +87,34 @@
 <style lang="scss">
     .cards {
         display: flex;
-        flex-direction: row;
-
+        flex-wrap: wrap;
         .card {
             width: 332px;
             height: 423px;
+            margin-right: 16px;
+            margin-left: 16px;
+
+            .card-name {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 25px;
+                color: #3F3F3F;
+                padding: 16px 115px 0 16px;
+            }
+            .card-description {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: #3F3F3F;
+                padding: 16px 16px 0 16px;
+            }
+            .card-price {
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 30px;
+                color: #3F3F3F;
+                padding: 32px 199px 24px 16px;
+            }
         }
     }
 
