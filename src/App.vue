@@ -7,9 +7,6 @@
 </template>
 
 <script>
-<<<<<<< HEAD
-    f
-=======
     import TheForm from '@/components/TheForm'
     import TheHeader from '@/components/TheHeader'
     import OfferList from '@/components/OfferList'
@@ -17,7 +14,6 @@
     export default {
         components: {TheForm, TheHeader, OfferList}
     }
->>>>>>> a625109df9268093d585169292bb786d8deefbc1
 </script>
 
 <style lang="scss">
