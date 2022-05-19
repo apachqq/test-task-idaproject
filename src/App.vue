@@ -8,31 +8,58 @@
             </select>
         </div>
     </div>
-    <form>
-        <div class="form-control">
-            <label for="name">Наименование товара</label>
-            <input type="text" id="name" placeholder="Введите наименование товара">
-        </div>
+    <div style="display: flex">
+        <form>
+            <div class="form-control">
+                <label for="name">Наименование товара</label>
+                <input type="text" id="name" placeholder="Введите наименование товара">
+            </div>
+            <div>
+                <label for="description">Описание товара</label>
+                <textarea type="text" id="description" placeholder="Введите описание товара" cols="30"
+                          rows="7"></textarea>
+            </div>
+            <div>
+                <label for="url">Ссылка на изображение товара</label>
+                <input type="url" id="url" placeholder="Введите ссылку">
+            </div>
+            <div>
+                <label for="price">Цена товара</label>
+                <input type="text" id="price" placeholder="Введите цену">
+            </div>
+            <button class="btn" @click.prevent>Добавить товар</button>
+        </form>
         <div>
-            <label for="description">Описание товара</label>
-            <textarea type="text" id="description" placeholder="Введите описание товара" cols="30" rows="7"></textarea>
+            <div class="cards">
+                <div class="card">
+                    <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
+                    <div>Наименование товара</div>
+                    <div>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                        товара в
+                        несколько строк
+                    </div>
+                    <div>10 000 руб.</div>
+                </div>
+
+            </div>
         </div>
-        <div>
-            <label for="url">Ссылка на изображение товара</label>
-            <input type="url" id="url" placeholder="Введите ссылку">
-        </div>
-        <div>
-            <label for="price">Цена товара</label>
-            <input type="text" id="price" placeholder="Введите цену">
-        </div>
-        <button class="btn" @click.prevent>Добавить товар</button>
-    </form>
+    </div>
 </template>
 
 <script>
 </script>
 
 <style lang="scss">
+    .cards {
+        display: flex;
+        flex-direction: row;
+
+        .card {
+            width: 332px;
+            height: 423px;
+        }
+    }
+
     .addProductSelect {
         display: flex;
         justify-content: space-between;
