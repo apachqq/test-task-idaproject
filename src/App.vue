@@ -33,9 +33,10 @@
             <div class="cards">
                 <div class="card">
                     <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
-                    <img class="delete-icon" src="img/delete.svg" />
+                    <img class="delete-icon" src="img/delete.svg"/>
                     <div class="card-name">Наименование товара</div>
-                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк.
+                        Довольно-таки интересное описание
                         товара в
                         несколько строк
                     </div>
@@ -43,9 +44,10 @@
                 </div>
                 <div class="card">
                     <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
-                    <img class="delete-icon" src="img/delete.svg" />
+                    <img class="delete-icon" src="img/delete.svg"/>
                     <div class="card-name">Наименование товара</div>
-                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк.
+                        Довольно-таки интересное описание
                         товара в
                         несколько строк
                     </div>
@@ -53,9 +55,10 @@
                 </div>
                 <div class="card">
                     <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
-                    <img class="delete-icon" src="img/delete.svg" />
+                    <img class="delete-icon" src="img/delete.svg"/>
                     <div class="card-name">Наименование товара</div>
-                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк.
+                        Довольно-таки интересное описание
                         товара в
                         несколько строк
                     </div>
@@ -63,19 +66,22 @@
                 </div>
                 <div class="card">
                     <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
-                    <img class="delete-icon" src="img/delete.svg" />
+                    <img class="delete-icon" src="img/delete.svg"/>
                     <div class="card-name">Наименование товара</div>
-                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк.
+                        Довольно-таки интересное описание
                         товара в
                         несколько строк
                     </div>
                     <div class="card-price">10 000 руб.</div>
                 </div>
                 <div class="card">
-                    <img class="card-icon" src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
-                    <img class="delete-icon" src="img/delete.svg" />
+                    <img class="card-icon" src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332"
+                         height="200">
+                    <img class="delete-icon" src="img/delete.svg"/>
                     <div class="card-name">Наименование товара</div>
-                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк.
+                        Довольно-таки интересное описание
                         товара в
                         несколько строк
                     </div>
@@ -93,19 +99,25 @@
     .cards {
         display: flex;
         flex-wrap: wrap;
+
         .card {
             width: 332px;
-            height: 423px;
-            margin-right: 16px;
-            margin-left: 16px;
+            margin: 16px;
             background: #FFFEFB;
             box-shadow: 0 20px 30px rgba(0, 0, 0, 0.04), 0 6px 10px rgba(0, 0, 0, 0.02);
             border-radius: 4px;
 
+            &:hover .delete-icon {
+                opacity: 1;
+            }
+
             .delete-icon {
+                opacity: 0;
                 position: relative;
                 bottom: 215px;
-                left: 310px
+                left: 310px;
+                padding: 0;
+                margin: 0;
             }
 
             .card-name {
@@ -115,6 +127,7 @@
                 color: #3F3F3F;
                 padding: 16px 115px 0 16px;
             }
+
             .card-description {
                 font-weight: 400;
                 font-size: 16px;
@@ -122,6 +135,7 @@
                 color: #3F3F3F;
                 padding: 16px 16px 0 16px;
             }
+
             .card-price {
                 font-weight: 600;
                 font-size: 24px;
