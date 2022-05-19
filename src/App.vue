@@ -1,99 +1,23 @@
 <template>
-    <div class="addProductSelect">
-        <div>Добавление товара</div>
-        <div class="select">
-            <select>
-                <option disabled value="">По умолчанию</option>
-                <option value=""></option>
-            </select>
-        </div>
-    </div>
+    <the-header></the-header>
     <div style="display: flex">
-        <form>
-            <div class="form-control">
-                <label for="name">Наименование товара</label>
-                <input type="text" id="name" placeholder="Введите наименование товара">
-            </div>
-            <div>
-                <label for="description">Описание товара</label>
-                <textarea id="description" placeholder="Введите описание товара" cols="30"
-                          rows="7"></textarea>
-            </div>
-            <div>
-                <label for="url">Ссылка на изображение товара</label>
-                <input type="url" id="url" placeholder="Введите ссылку">
-            </div>
-            <div>
-                <label for="price">Цена товара</label>
-                <input type="text" id="price" placeholder="Введите цену">
-            </div>
-            <button class="btn" @click.prevent>Добавить товар</button>
-        </form>
-        <div>
-            <div class="cards">
-                <div class="card">
-                    <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
-                    <img class="delete-icon" src="img/delete.svg"/>
-                    <div class="card-name">Наименование товара</div>
-                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк.
-                        Довольно-таки интересное описание
-                        товара в
-                        несколько строк
-                    </div>
-                    <div class="card-price">10 000 руб.</div>
-                </div>
-                <div class="card">
-                    <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
-                    <img class="delete-icon" src="img/delete.svg"/>
-                    <div class="card-name">Наименование товара</div>
-                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк.
-                        Довольно-таки интересное описание
-                        товара в
-                        несколько строк
-                    </div>
-                    <div class="card-price">10 000 руб.</div>
-                </div>
-                <div class="card">
-                    <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
-                    <img class="delete-icon" src="img/delete.svg"/>
-                    <div class="card-name">Наименование товара</div>
-                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк.
-                        Довольно-таки интересное описание
-                        товара в
-                        несколько строк
-                    </div>
-                    <div class="card-price">10 000 руб.</div>
-                </div>
-                <div class="card">
-                    <img src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332" height="200">
-                    <img class="delete-icon" src="img/delete.svg"/>
-                    <div class="card-name">Наименование товара</div>
-                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк.
-                        Довольно-таки интересное описание
-                        товара в
-                        несколько строк
-                    </div>
-                    <div class="card-price">10 000 руб.</div>
-                </div>
-                <div class="card">
-                    <img class="card-icon" src="https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg" width="332"
-                         height="200">
-                    <img class="delete-icon" src="img/delete.svg"/>
-                    <div class="card-name">Наименование товара</div>
-                    <div class="card-description">Довольно-таки интересное описание товара в несколько строк.
-                        Довольно-таки интересное описание
-                        товара в
-                        несколько строк
-                    </div>
-                    <div class="card-price">10 000 руб.</div>
-                </div>
-            </div>
-        </div>
+        <the-form></the-form>
+        <offer-list></offer-list>
     </div>
 </template>
 
 <script>
+<<<<<<< HEAD
     f
+=======
+    import TheForm from '@/components/TheForm'
+    import TheHeader from '@/components/TheHeader'
+    import OfferList from '@/components/OfferList'
+
+    export default {
+        components: {TheForm, TheHeader, OfferList}
+    }
+>>>>>>> a625109df9268093d585169292bb786d8deefbc1
 </script>
 
 <style lang="scss">
@@ -180,7 +104,7 @@
         border: none;
         font-size: 12px;
         line-height: 15px;
-        color: #B4B4B4;
+        color: #3F3F3F;
         padding: 10px 0 0 16px;
         resize: none;
     }
@@ -199,13 +123,13 @@
         border: none;
         width: 284px;
         height: 36px;
+        padding: 10px 0 11px 16px;
     }
 
     input::placeholder {
         font-size: 12px;
         line-height: 15px;
         color: #B4B4B4;
-        padding: 10px 0 11px 16px;
     }
 
     form {
@@ -214,6 +138,7 @@
         width: 332px;
         height: 440px;
         margin: 16px 16px 0 32px;
+
 
         div:nth-child(1) {
             margin: 24px 24px 16px 24px;
