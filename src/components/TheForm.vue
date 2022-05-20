@@ -17,7 +17,7 @@
             <label for="price">Цена товара</label>
             <input type="number" id="price" placeholder="Введите цену" required v-model.trim="price">
         </div>
-        <button class="btn" :class="{btnn : isValid}">Добавить товар</button>
+        <button class="btn" :class="{btn_active : isValid}">Добавить товар</button>
     </form>
 </template>
 
@@ -39,7 +39,7 @@
 </script>
 
 <style lang="scss" scoped>
-    .btnn {
+    .btn_active {
         background: #7BAE73;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
