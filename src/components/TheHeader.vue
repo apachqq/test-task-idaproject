@@ -1,16 +1,16 @@
 <template>
     <div class="addProductSelect">
         <div>Добавление товара</div>
-        <div class="select">
-            <select>
-                <option disabled value="">По умолчанию</option>
-                <option value=""></option>
-            </select>
-        </div>
+        <my-select></my-select>
     </div>
 </template>
 
 <script>
+    import MySelect from '@/components/MySelect'
+
+    export default {
+        components: {MySelect}
+    }
 </script>
 
 <style scoped>
