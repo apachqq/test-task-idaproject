@@ -2,7 +2,7 @@
     <the-header></the-header>
     <div style="display: flex">
         <the-form></the-form>
-        <offer-list></offer-list>
+        <offer-list :offers="offers"></offer-list>
     </div>
 </template>
 
@@ -12,6 +12,19 @@
     import OfferList from '@/components/OfferList'
 
     export default {
+        data() {
+            return {
+                offers: [
+                    {
+                        id: 1,
+                        title: 'Наименование товара',
+                        body: 'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
+                        picture: 'https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg',
+                        price: '10 000'
+                    }
+                ]
+            }
+        },
         components: {TheForm, TheHeader, OfferList}
     }
 </script>

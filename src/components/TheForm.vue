@@ -2,7 +2,7 @@
     <form>
         <div class="form-control">
             <label for="name">Наименование товара</label>
-            <input type="text" id="name" placeholder="Введите наименование товара">
+            <input type="text" id="name" placeholder="Введите наименование товара" required>
         </div>
         <div>
             <label for="description">Описание товара</label>

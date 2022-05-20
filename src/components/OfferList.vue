@@ -1,7 +1,11 @@
 <template>
     <div>
         <div class="cards">
-            <card-item></card-item>
+            <card-item
+                    v-for="offer in offers"
+                    :key="offer.id"
+                    :offer="offer"
+            ></card-item>
         </div>
     </div>
 </template>
@@ -10,6 +14,11 @@
     import CardItem from '@/components/CardItem'
 
     export default {
+        props: {
+            offers: {
+                type: Array
+            }
+        },
         components: {CardItem}
     }
 </script>
