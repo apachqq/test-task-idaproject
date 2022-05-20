@@ -1,7 +1,9 @@
 <template>
     <the-header></the-header>
     <div style="display: flex">
-        <the-form></the-form>
+        <the-form
+                @create="createOffer"
+        ></the-form>
         <offer-list :offers="offers"></offer-list>
     </div>
 </template>
@@ -23,6 +25,11 @@
                         price: '10 000'
                     }
                 ]
+            }
+        },
+        methods: {
+            createOffer(offer) {
+                this.offers.push(offer)
             }
         },
         components: {TheForm, TheHeader, OfferList}
@@ -160,15 +167,6 @@
 
         div:nth-child(4) {
             margin: 16px 24px 0 24px;
-        }
-
-        .btn {
-            background: #EEEEEE;
-            border-radius: 10px;
-            border: none;
-            margin: 24px;
-            padding: 10px 95px 11px 96px;
-            white-space: nowrap;
         }
     }
 </style>
