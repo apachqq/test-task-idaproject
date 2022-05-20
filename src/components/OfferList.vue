@@ -24,7 +24,7 @@
         components: {CardItem}
     }
 </script>
-
+<!--222-->
 <style scoped>
     .offer-list-item {
         display: inline-block;
