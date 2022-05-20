@@ -4,7 +4,10 @@
         <the-form
                 @create="createOffer"
         ></the-form>
-        <offer-list :offers="offers"></offer-list>
+        <offer-list
+                :offers="offers"
+                @remove="removeOffer"
+        ></offer-list>
     </div>
 </template>
 
@@ -30,6 +33,9 @@
         methods: {
             createOffer(offer) {
                 this.offers.push(offer)
+            },
+            removeOffer(offer) {
+                this.offers = this.offers.filter(o => o.id !== offer.id)
             }
         },
         components: {TheForm, TheHeader, OfferList}

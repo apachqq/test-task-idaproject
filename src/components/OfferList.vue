@@ -6,6 +6,7 @@
                         v-for="offer in offers"
                         :key="offer.id"
                         :offer="offer"
+                        @remove="$emit('remove', offer)"
                 ></card-item>
             </transition-group>
         </div>
@@ -18,7 +19,8 @@
     export default {
         props: {
             offers: {
-                type: Array
+                type: Array,
+                required: true
             }
         },
         components: {CardItem}
