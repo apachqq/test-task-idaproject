@@ -46,6 +46,13 @@
                         body: 'Текст',
                         picture: 'https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg',
                         price: '7700'
+                    },
+                    {
+                        id: 4,
+                        title: 'Ааа',
+                        body: 'Ааа',
+                        picture: 'https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg',
+                        price: '1200'
                     }
                 ],
                 selectedSort: '',
