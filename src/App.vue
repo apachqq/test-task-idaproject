@@ -1,19 +1,21 @@
 <template>
-    <div class="addProductSelect">
-        <div>Добавление товара</div>
-        <my-select
-                v-model="selectedSort"
-                :options="sortOptions"
-        ></my-select>
-    </div>
-    <div style="display: flex">
-        <the-form
-                @create="createOffer"
-        ></the-form>
-        <offer-list
-                :offers="offers"
-                @remove="removeOffer"
-        ></offer-list>
+    <div class="sss">
+        <div class="addProductSelect">
+            <div>Добавление товара</div>
+            <my-select
+                    v-model="selectedSort"
+                    :options="sortOptions"
+            ></my-select>
+        </div>
+        <div class="main">
+            <the-form
+                    @create="createOffer"
+            ></the-form>
+            <offer-list
+                    :offers="offers"
+                    @remove="removeOffer"
+            ></offer-list>
+        </div>
     </div>
 </template>
 
@@ -96,6 +98,10 @@
 </script>
 
 <style lang="scss">
+    .main {
+        display: flex;
+    }
+
     .cards {
         display: flex;
         flex-wrap: wrap;
@@ -183,6 +189,11 @@
         color: #3F3F3F;
         padding: 10px 0 0 16px;
         resize: none;
+        outline: none;
+
+        &:focus {
+            outline: 2px solid green;
+        }
     }
 
     textarea::placeholder {
@@ -200,6 +211,11 @@
         width: 284px;
         height: 36px;
         padding: 10px 0 11px 16px;
+        outline: none;
+
+        &:focus {
+            outline: 2px solid green;
+        }
     }
 
     input::placeholder {
