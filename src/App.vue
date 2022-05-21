@@ -33,31 +33,31 @@
                 offers: [
                     {
                         id: 1,
-                        title: 'Ваименование товара',
+                        title: 'IP-камера видеонаблюдения Axis Q1635-E',
+                        body: 'Камера может не только работать при температуре -40°C, но и включаться при этой температуре после аварийного отключения электропитания.',
+                        picture: 'https://ipvs.ru/upload/iblock/5e0/IP_______________582af60d5d7d8[1].jpg',
+                        price: '149831'
+                    },
+                    {
+                        id: 2,
+                        title: 'Наименование товара',
                         body: 'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
                         picture: 'https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg',
                         price: '10000'
                     },
                     {
-                        id: 2,
-                        title: 'Бмя',
-                        body: 'Описание',
-                        picture: 'https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg',
-                        price: '6500'
-                    },
-                    {
                         id: 3,
-                        title: 'Текст',
-                        body: 'Текст',
-                        picture: 'https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg',
-                        price: '7700'
+                        title: 'Камера видеонаблюдения ТЕЛЕКОМ-МАСТЕР 4G Точка Зрения Вьюга',
+                        body: '«Точка зрения Вьюга» уличная камера с температурным режимом -35°С / +50°С. на базе 4g LTE IP модуля с поддержкой протокола ONVIF.',
+                        picture: 'https://cdnmedia.220-volt.ru/content/products/197/197243/images/original/n1200x800_q80/1.jpeg',
+                        price: '26599'
                     },
                     {
                         id: 4,
-                        title: 'Ааа',
-                        body: 'Ааа',
-                        picture: 'https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg',
-                        price: '1200'
+                        title: 'Камера видеонаблюдения 4G 2Мп 1080P PST GBK20T',
+                        body: 'Уличная компактная камера, работающая в 3G/4G сетях. В камеру можно установить сим карту любого оператора. Сим карта должна поддерживать 3G/4G протоколы передачи данных.',
+                        picture: 'https://rusmarta.ru/upload/resize_cache/iblock/5eb/1000_1000_138bc3980d02b28565b325bedea7c3638/GBK50_2.jpg',
+                        price: '8599'
                     }
                 ],
                 sortOptions: [
@@ -72,7 +72,7 @@
         mounted() {
             setTimeout(() => {
                 this.isOffersLoaded = true
-            }, 2500)
+            }, 1)
         },
         methods: {
             createOffer(offer) {
