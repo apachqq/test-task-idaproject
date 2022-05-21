@@ -31,6 +31,7 @@
 
 <style lang="scss" scoped>
     select {
+        margin-right: 4.3rem;
         background: #FFFEFB;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         border-radius: 4px;

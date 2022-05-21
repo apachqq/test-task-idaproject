@@ -1,5 +1,5 @@
 <template>
-    <form>
+    <form @submit.prevent="createOffer">
         <div class="form-control">
             <label for="name">Наименование товара</label>
             <input type="text" id="name" placeholder="Введите наименование товара" required v-model.trim="offer.title">
@@ -17,7 +17,7 @@
             <label for="price">Цена товара</label>
             <input type="number" id="price" placeholder="Введите цену" required v-model.trim="offer.price">
         </div>
-        <button class="btn" :class="{'btn-isValid' : isValid}" @click.prevent="createOffer">Добавить товар</button>
+        <button class="btn" :class="{'btn-isValid' : isValid}">Добавить товар</button>
     </form>
 </template>
 
