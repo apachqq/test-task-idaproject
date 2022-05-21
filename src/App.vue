@@ -72,7 +72,7 @@
         mounted() {
             setTimeout(() => {
                 this.isOffersLoaded = true
-            }, 1)
+            }, 2500)
         },
         methods: {
             createOffer(offer) {
