@@ -1,11 +1,17 @@
 <template>
-    <the-header></the-header>
+    <div class="addProductSelect">
+        <div>Добавление товара</div>
+        <my-select
+                v-model="selectedSort"
+                :options="sortOptions"
+        ></my-select>
+    </div>
     <div style="display: flex">
         <the-form
                 @create="createOffer"
         ></the-form>
         <offer-list
-                :offers="offers"
+                :offers="sortedOffers"
                 @remove="removeOffer"
         ></offer-list>
     </div>
@@ -13,8 +19,8 @@
 
 <script>
     import TheForm from '@/components/TheForm'
-    import TheHeader from '@/components/TheHeader'
     import OfferList from '@/components/OfferList'
+    import MySelect from '@/components/MySelect'
 
     export default {
         data() {
@@ -26,7 +32,27 @@
                         body: 'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
                         picture: 'https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg',
                         price: '10 000'
+                    },
+                    {
+                        id: 2,
+                        title: 'Имя',
+                        body: 'Описание',
+                        picture: 'https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg',
+                        price: '6500'
+                    },
+                    {
+                        id: 3,
+                        title: 'Текст',
+                        body: 'Текст',
+                        picture: 'https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg',
+                        price: '7700'
                     }
+                ],
+                selectedSort: '',
+                sortOptions: [
+                    {value: 'title', name: 'По наименованию'},
+                    {value: 'min', name: 'По минимальной цене'},
+                    {value: 'max', name: 'По максимальной цене'}
                 ]
             }
         },
@@ -38,7 +64,14 @@
                 this.offers = this.offers.filter(o => o.id !== offer.id)
             }
         },
-        components: {TheForm, TheHeader, OfferList}
+        computed: {
+            sortedOffers() {
+                return [...this.offers].sort((offer1, offer2) => {
+                    return offer1[this.selectedSort]?.localeCompare(offer2[this.selectedSort])
+                })
+            }
+        },
+        components: {TheForm, OfferList, MySelect}
     }
 </script>
 
@@ -46,6 +79,7 @@
     .cards {
         display: flex;
         flex-wrap: wrap;
+        margin-left: 380px;
 
         .card {
             width: 332px;
@@ -160,6 +194,7 @@
         width: 332px;
         height: 440px;
         margin: 16px 16px 0 32px;
+        position: fixed;
 
 
         div:nth-child(1) {
