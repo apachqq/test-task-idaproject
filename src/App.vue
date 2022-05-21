@@ -11,7 +11,7 @@
                 @create="createOffer"
         ></the-form>
         <offer-list
-                :offers="sortedOffers"
+                :offers="offers"
                 @remove="removeOffer"
         ></offer-list>
     </div>
@@ -28,14 +28,14 @@
                 offers: [
                     {
                         id: 1,
-                        title: 'Наименование товара',
+                        title: 'Ваименование товара',
                         body: 'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
                         picture: 'https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg',
-                        price: '10 000'
+                        price: '10000'
                     },
                     {
                         id: 2,
-                        title: 'Имя',
+                        title: 'Бмя',
                         body: 'Описание',
                         picture: 'https://jmdv.ru/UserFiles/Image/img305_39266_big.jpg',
                         price: '6500'
@@ -58,8 +58,8 @@
                 selectedSort: '',
                 sortOptions: [
                     {value: 'title', name: 'По наименованию'},
-                    {value: 'min', name: 'По минимальной цене'},
-                    {value: 'max', name: 'По максимальной цене'}
+                    {value: 'min', name: 'Сначала дешёвые'},
+                    {value: 'max', name: 'Сначала дорогие'}
                 ]
             }
         },
@@ -71,11 +71,24 @@
                 this.offers = this.offers.filter(o => o.id !== offer.id)
             }
         },
-        computed: {
-            sortedOffers() {
-                return [...this.offers].sort((offer1, offer2) => {
-                    return offer1[this.selectedSort]?.localeCompare(offer2[this.selectedSort])
-                })
+        watch: {
+            selectedSort(newValue) {
+                console.log(newValue)
+                if (newValue === 'title') {
+                    this.offers.sort((offer1, offer2) => {
+                        return offer1[newValue]?.localeCompare(offer2[newValue])
+                    })
+                }
+                if (newValue === 'min') {
+                    this.offers.sort((offer1, offer2) => {
+                        return offer1.price - offer2.price
+                    })
+                }
+                if (newValue === 'max') {
+                    this.offers.sort((offer1, offer2) => {
+                        return offer2.price - offer1.price
+                    })
+                }
             }
         },
         components: {TheForm, OfferList, MySelect}

@@ -1,6 +1,6 @@
 <template>
     <div class="select">
-        <select @change="changeOption">fff
+        <select @change="changeOption">
             <option value="">По умолчанию</option>
             <option
                     v-for="option in options"
