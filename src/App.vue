@@ -1,5 +1,5 @@
 <template>
-    <div class="sss">
+    <div>
         <div class="addProductSelect">
             <div>Добавление товара</div>
             <my-select
@@ -14,7 +14,9 @@
             <offer-list
                     :offers="offers"
                     @remove="removeOffer"
+                    v-if="isOffersLoaded"
             ></offer-list>
+            <the-loader class="loader" v-else></the-loader>
         </div>
     </div>
 </template>
@@ -23,6 +25,7 @@
     import TheForm from '@/components/TheForm'
     import OfferList from '@/components/OfferList'
     import MySelect from '@/components/MySelect'
+    import TheLoader from '@/components/TheLoader'
 
     export default {
         data() {
@@ -57,13 +60,19 @@
                         price: '1200'
                     }
                 ],
-                selectedSort: '',
                 sortOptions: [
                     {value: 'title', name: 'По наименованию'},
                     {value: 'min', name: 'Сначала дешёвые'},
                     {value: 'max', name: 'Сначала дорогие'}
-                ]
+                ],
+                selectedSort: '',
+                isOffersLoaded: false
             }
+        },
+        mounted() {
+            setTimeout(() => {
+                this.isOffersLoaded = true
+            }, 2500)
         },
         methods: {
             createOffer(offer) {
@@ -93,13 +102,19 @@
                 }
             }
         },
-        components: {TheForm, OfferList, MySelect}
+        components: {TheForm, OfferList, MySelect, TheLoader}
     }
 </script>
 
 <style lang="scss">
     .main {
         display: flex;
+
+        .loader {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 380px;
+        }
     }
 
     .cards {
