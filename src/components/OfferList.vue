@@ -43,6 +43,7 @@
         opacity: 0;
         transform: translateY(130px);
     }
+
     .offer-list-move {
         transition: transform 0.8s ease;
     }
