@@ -27,7 +27,13 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 380px;
+    }
+
     .offer-list-item {
         display: inline-block;
         margin-right: 10px;
