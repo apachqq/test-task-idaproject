@@ -74,7 +74,17 @@
         }
     }
 
-    @media screen and (max-width: 601px) {
+    @media screen and (max-width: 700px) {
+        .card {
+            width: 400px;
+
+            .scale {
+                width: 400px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 550px) {
         .card {
             width: 300px;
 

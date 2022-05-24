@@ -145,7 +145,7 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 700px) {
         form {
             width: 250px;
             margin-left: 0;
@@ -162,6 +162,26 @@
 
         textarea {
             width: 200px;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        form {
+            width: 200px;
+            margin-left: 0;
+
+            .btn {
+                width: 150px;
+                padding: 6px;
+            }
+        }
+
+        input {
+            width: 150px;
+        }
+
+        textarea {
+            width: 150px;
         }
     }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="sss">
         <div class="addProductSelect">
             <div>Добавление товара</div>
             <my-select

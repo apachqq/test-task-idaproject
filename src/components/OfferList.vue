@@ -54,9 +54,18 @@
         transition: transform 0.8s ease;
     }
 
-    @media screen and (max-width: 601px) {
+    @media screen and (max-width: 700px) {
         .cards {
+            width: 350px;
             margin-left: 250px;
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .cards {
+            width: 300px;
+            margin-left: 185px;
             margin-right: 0;
         }
     }
