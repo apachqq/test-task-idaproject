@@ -144,4 +144,24 @@
         background: #7BAE73;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
+    @media screen and (max-width: 600px) {
+        form {
+            width: 250px;
+            margin-left: 0;
+
+            .btn {
+                width: 200px;
+                padding: 8px;
+            }
+        }
+
+        input {
+            width: 200px;
+        }
+
+        textarea {
+            width: 200px;
+        }
+    }
 </style>

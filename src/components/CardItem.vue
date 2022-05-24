@@ -73,4 +73,14 @@
             padding: 32px 199px 24px 16px;
         }
     }
+
+    @media screen and (max-width: 601px) {
+        .card {
+            width: 300px;
+
+            .scale {
+                width: 300px;
+            }
+        }
+    }
 </style>

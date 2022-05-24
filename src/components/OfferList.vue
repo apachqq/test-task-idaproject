@@ -53,4 +53,11 @@
     .offer-list-move {
         transition: transform 0.8s ease;
     }
+
+    @media screen and (max-width: 601px) {
+        .cards {
+            margin-left: 250px;
+            margin-right: 0;
+        }
+    }
 </style>
